@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Section1 from './components/Section1/Section1'
 import Section2 from './components/Section2/Section2'
+import Function from './components/function'
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
       <div>
        <Section1 users={users}/>
        <Section2 />
+       <Function />
       </div>
      
     </>
