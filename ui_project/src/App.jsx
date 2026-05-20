@@ -5,6 +5,7 @@ import './App.css'
 import Section1 from './components/Section1/Section1'
 import Section2 from './components/Section2/Section2'
 import Function from './components/function'
+import Hooks from './components/Hooks'
 
 function App() {
 
@@ -29,9 +30,10 @@ function App() {
   return (
     <>
       <div>
-       <Section1 users={users}/>
+       {/* <Section1 users={users}/>
        <Section2 />
-       <Function />
+       <Function /> */}
+       <Hooks />
       </div>
      
     </>
