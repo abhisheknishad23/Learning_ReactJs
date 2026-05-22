@@ -2,14 +2,16 @@ import React from 'react'
 import Card from './components/Card'
 import Navbar from './components/Navbar'
 import Props from './components/Props'
+import UseState from './components/Usestate.jsx/UseState'
 
 const App = () => {
   return (
     <div>
       
-      <Navbar />
+      {/* <Navbar />
       <Card />
-      <Props user='ka ho ji'  age={18} />
+      <Props user='ka ho ji'  age={18} /> */}
+      <UseState />
 
     </div>
   )
