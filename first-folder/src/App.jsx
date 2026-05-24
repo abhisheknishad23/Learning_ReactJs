@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Props from './components/Props'
 import UseState from './components/Usestate/UseState'
 import FormHandler from './components/formHandler/FormHandler'
+import TwoWayBinding from './components/formHandler/TwoWayBinding'
 
 const App = () => {
   return (
@@ -13,7 +14,8 @@ const App = () => {
       <Card />
       <Props user='ka ho ji'  age={18} /> */}
       {/* <UseState /> */}
-      <FormHandler />
+      {/* <FormHandler /> */}
+      <TwoWayBinding />
 
     </div>
   )
