@@ -5,6 +5,7 @@ import Props from './components/Props'
 import UseState from './components/Usestate/UseState'
 import FormHandler from './components/formHandler/FormHandler'
 import TwoWayBinding from './components/formHandler/TwoWayBinding'
+import localStorage from './components/localStorage'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       {/* <UseState /> */}
       {/* <FormHandler /> */}
       <TwoWayBinding />
+      <localStorage />
 
     </div>
   )

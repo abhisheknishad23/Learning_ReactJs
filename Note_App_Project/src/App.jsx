@@ -27,8 +27,11 @@ function App() {
     setDetails('')
   }
 
-  const deleteNote = ()=>{
-    console.log('deleted')
+  const deleteNote = (idx)=>{
+    const copyTask = [...task];
+
+    copyTask.splice(idx,1)
+    setTask(copyTask)
   }
 
   return (
@@ -52,9 +55,11 @@ function App() {
             return <div key={idx} className=" flex justify-between flex-col items-start relative h-52 bg-cover py-8 w-40 rounded-xl p-4 text-black bg-white bg-[url('')]">
               <div>
               <h3 className='leading-tight text-xl font-bold'>{elem.title}</h3>
-              <p className='mt-4 leading-tight font-medium text-pink-700'>{elem.details}</p>
+              <p className='mt-4 leading-tight text-xs text-pink-700'>{elem.details}</p>
               </div>
-              <button onClick={deleteNote} className='w-full cursor-pointer active:scale-90 bg-amber-800 py-1 text-xs rounded font-bold text-white'>Delete</button>
+              <button onClick={()=>{
+                deleteNote(idx)
+              }} className='w-full cursor-pointer active:scale-90 bg-amber-800 py-1 text-xs rounded font-bold text-white'>Delete</button>
             </div>
             
           })}
