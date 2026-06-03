@@ -1,11 +1,14 @@
-import React from "react"
+import React, { useState } from "react"
+import axios from 'axios'
 
 const ApiCalling = ()=>{
 
+    const [data, setData] = useState([])
+
     const getapi = async ()=>{
-        const response = await fetch ('https://jsonplaceholder.typicode.com/posts')
-        const data = await response.json()
-        console.log(data);
+        const response = await axios.get ('https://jsonplaceholder.typicode.com/posts')
+       // const response = await response.json()
+        setData(response.data);
     }
     
 
@@ -13,6 +16,13 @@ const ApiCalling = ()=>{
     return(
         <div>
             <button onClick={getapi}>Get Data</button>
+            <div>
+                {data.map(function(elem,idx){
+                    return <h2>hello</h2>
+                })}
+
+                {/* {data} <h2>heloo</h2> */}
+            </div>
         </div>
     )
 }
