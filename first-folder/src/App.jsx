@@ -6,6 +6,7 @@ import UseState from './components/Usestate/UseState'
 import FormHandler from './components/formHandler/FormHandler'
 import TwoWayBinding from './components/formHandler/TwoWayBinding'
 import localStorage from './components/localStorage'
+import ApiCalling from './components/ApiCalling'
 
 const App = () => {
   return (
@@ -16,8 +17,9 @@ const App = () => {
       <Props user='ka ho ji'  age={18} /> */}
       {/* <UseState /> */}
       {/* <FormHandler /> */}
-      <TwoWayBinding />
-      <localStorage />
+      {/* <TwoWayBinding />
+      <localStorage /> */}
+      <ApiCalling />
 
     </div>
   )
