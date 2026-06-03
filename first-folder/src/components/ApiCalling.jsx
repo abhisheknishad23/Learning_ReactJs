@@ -12,7 +12,7 @@ const ApiCalling = ()=>{
 
     return(
         <div>
-            <button onClick={getapi}>Get Api Data</button>
+            <button onClick={getapi}>Get Data</button>
         </div>
     )
 }
