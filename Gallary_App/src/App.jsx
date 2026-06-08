@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import Card from './components/Card';
 
 
 function App() {
@@ -17,7 +18,7 @@ const [index, setIndex]=useState(1)
   }
 
   useEffect(function(){
-    getdata
+    getdata()
   },[index])
 
   let printUserData = 'No user data available'
@@ -25,23 +26,19 @@ const [index, setIndex]=useState(1)
   if(userData.length>0){
     printUserData = userData.map(function(elem, idx){
 
-      return <div >
-        <a href={elem.url} target='_blank'></a>
-        <div className='h-40 w-44 overflow-hidden'>
-          <img className='h-full w-full object-cover' src={elem.download_url} alt='' ></img>
-      </div>
-      <h2>{elem.author}</h2>
+      return <div key={idx}>
+        <Card elem={elem} />
       </div>
     })
   }
 
   return (
-    <div className='bg-black h-screen p-4 text-white'>
+    <div className='bg-black overflow-auto h-screen p-4 text-white'>
       {/* <button onClick={getdata} className='bg-green-400 mt-4 text-white py-2 active:scale-78 px-4 rounded ml-4' >
         Get Data
       </button> */}
 
-      <div className='flex flex-wrap gap-2'>
+      <div className='flex flex-wrap p-2 gap-2'>
        {printUserData}
       </div> 
 
