@@ -14,6 +14,7 @@ import Men from './pages/Men'
 import Women from './pages/Women'
 import Shop from './pages/Shop'
 import ShopDetails from './pages/ShopDetails'
+import ReturnBack from './components/ReturnBack'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +23,7 @@ function App() {
 
      <div className='h-screen bg-black text-white'>
       <Header />
+      <ReturnBack />
 
       <Routes>
         <Route path='/' element={<Home />} />
