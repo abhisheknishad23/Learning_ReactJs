@@ -12,6 +12,8 @@ import PagenotF from './pages/PagenotF'
 import Product from './pages/Product'
 import Men from './pages/Men'
 import Women from './pages/Women'
+import Shop from './pages/Shop'
+import ShopDetails from './pages/ShopDetails'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -31,6 +33,11 @@ function App() {
           <Route path='men' element={<Men />} />
           <Route path='women' element={<Women />} />
         </Route>
+
+        <Route path='/shop' element={<Shop />} />
+        <Route path='/shop/:id' element={<ShopDetails />} />
+
+
         <Route path='*' element={<PagenotF />} />
         
       </Routes>
